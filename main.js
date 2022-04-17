@@ -230,11 +230,11 @@ const page = document.querySelector("body");
 let popupActive = null;
 
 const popularSort = () => {
-    const sortNotes = notes.sort((a, b) => {
-        if (a.isPopular < b.isPopular) {
+    const sortNotes = notes.sort((note1, note2) => {
+        if (note1.isPopular < note2.isPopular) {
             return 1;
         }
-        if (a.isPopular > b.isPopular) {
+        if (note1.isPopular > note2.isPopular) {
             return -1;
         }
     });
